@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anams Bursdag 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="visualizer"></canvas>
+  <div id="floating-container" aria-hidden="true"></div>
+
+  <h1 class="party-title glow-yellow bounce fade-in">🎉 Anams Bursdag 🎤</h1>
+
+  <div id="countdown" class="panel countdown-panel glow-yellow bounce fade-in">
+    ⏱️ til verdens kuleste dag!!!
+  </div>
+
+  <section class="panel bounce fade-in">
+    <p class="panel__text glow-yellow bounce fade-in">🗓️ <strong>Dato:</strong> 1. juli 2025</p>
+    <p class="panel__text glow-yellow bounce fade-in">🎉 <strong>Planer:</strong> Piknik & Karaoke</p>
+    <p class="panel__text glow-yellow bounce fade-in">📍 <strong>Sted:</strong> Kommer, men be til Gud om fint vær</p>
+  </section>
+
+  <section class="panel bounce fade-in">
+    <video
+      id="karaoke-video"
+      poster="video/karaoke-poster.jpg"
+      controls
+      preload="metadata"
+      loading="lazy"
+    >
+      <source src="video/karaoke.mp4" type="video/mp4" />
+      Din nettleser støtter ikke video.
+    </video>
+    <p class="media-caption glow-yellow bounce fade-in">Karaoke Night!</p>
+  </section>
+
+  <section class="panel bounce fade-in">
+    <label for="navn" class="panel__label glow-yellow bounce fade-in">Navn for RSVP via SMS:</label>
+    <input type="text" id="navn" placeholder="F.eks. Taylor Swift" class="bounce fade-in" />
+    <button class="btn glow-yellow bounce fade-in" id="send-rsvp">📱 Send RSVP</button>
+  </section>
+
+  <button class="btn btn--music glow-yellow bounce fade-in" id="play-music">▶️ Spill "Alexander Hamilton"</button>
+
+  <audio id="hamilton-audio" preload="auto">
+    <source src="audio/hamilton.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
